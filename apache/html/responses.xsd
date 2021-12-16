@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="emotions">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="emotion" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:attribute name="id" type="xs:integer"></xs:attribute>
+                        <xs:sequence>
+                            <xs:element name="emotion_name" type="xs:string"></xs:element>
+                            <xs:element name="response" type="xs:string"></xs:element>
+                            <xs:element name="security_level" type="xs:string"></xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

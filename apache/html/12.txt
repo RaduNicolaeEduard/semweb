@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="style.css">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide*/
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+<body>
+
+  
+<!-- Navbar -->
+<div class="top">
+  <div class="bar cyan card left-align large">
+    <a href="#" class="bar-item button padding-large cyan">English</a>
+    <a href="#" class="bar-item button padding-large cyan">French</a>
+
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="bar-block hide hide-large hide-medium large">
+    <a href="#" class="bar-item button padding-large">English</a>
+    <a href="#" class="bar-item button padding-large">French</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="container cyan center" style="padding:128px 16px">
+  <h1 class="margin jumbo">Web Application using Semantics</h1>
+  <p class="xlarge">Barbu Flavia-Maria</p>
+  <p class="xlarge">Gaaia Mongia Kenza</p>
+</header>
+
+<!-- First Grid -->
+<div class="row-padding padding-64 container">
+  <div class="content">
+    <div class="twothird">
+      <h1 class="text-red">Exercice 1</h1>
+      <h5 class="padding-32">
+        We have created input data for at least 20 emotions in XML format and associated ways of handling them in this webpage.
+      </h5>
+      <p class="text-grey">Below is the link which redirects to the xml file content</p>
+      <button class="button black padding-large large margin-top"><a href="emotions.xml">Click here</a></button>
+    </div>
+  </div>
+</div>
+
+<!-- Second Grid -->
+<div class="row-padding light-grey padding-64 container">
+  <div class="content">
+    <div class="twothird">
+      <h1 class="text-red">Exercice 2</h1>
+      <h5 class="padding-32">
+        We have created a DTS and a XSD file for the XML emotion file.
+      </h5>
+      <p class="text-grey">Below are the links which redirect to the dtd and xsd file content</p>
+      <button class="button black padding-large large margin-top"><a href="emotions.dtd">Click here for DTD</a></button>
+      <button class="button black padding-large large margin-top"><a href="emotions.xsd">Click here for XSD</a></button>
+    </div>
+  </div>
+</div>
+
+<!-- Third Grid -->
+<div class="row-padding padding-64 container">
+  <div class="content">
+    <div class="twothird">
+      <h1 class="text-red">Exercice 3</h1>
+      <h5 class="padding-32">
+        We have read the list of emotions from the local XML file named emotions in memory.
+        For that, we have been using the function loadXMLDoc(). 
+        Firstly, we have created an XMLHttpRequest object in order to request data from our local server.
+        After that, we have specified the type of request(GET), the url: the file location and the async: true (asynchronous).
+        To finish the process, we have used send method to transmit forward a request string to the server (used for POST)
+      </h5>
+      <p class="text-grey">Below are the images which illustrate how the function works and the button which loads the file</p>
+      <p class="text-grey">The loadXMLDoc() code</p><br>
+      <span><img src="images/image1.png" ></span><br><br>
+      <p class="text-grey">The xml file loaded into the memory</p><br>
+      <span><img src="images/image2.png" width="900"></span><br><br>
+      <button class="button black padding-large large margin-top" onclick="loadXMLDoc()">Click here</button>
+    </div>
+  </div>
+</div>
+
+<!-- Fourth Grid -->
+<div class="row-padding light-grey padding-64 container">
+  <div class="content">
+    <div class="twothird">
+      <h1 class="text-red">Exercice 4</h1>
+      <h5 class="padding-32">
+        We have created a form in which we allow users to submit a news emotional management solution.  We have included these solutions to a local XML file named responses. 
+        Also, we loaded this file into the memory. To do that, firstly we stored the responses in a database from where we extracted the information into an XML file. 
+        To load the file into the memory, we have been using the same method exposed one exercice above
+      </h5>
+      <p class="text-grey">Below are the images which illustrate how the process works, the form the button which loads the file</p>
+      <p class="text-grey">The responses saved in the database</p><br>
+      <span><img src="images/image3.png" width="900"></span><br><br>
+      <p class="text-grey">The responses xml file uploaded with the info extracted from the database</p><br>
+      <span><img src="images/image4.png" width="900"></span><br><br>
+      <p class="text-grey">The php code which creates the databes</p><br>
+      <span><img src="images/image5.png"></span><br><br>
+      <p class="text-grey">The php code which saves the content into the xml file</p><br>
+      <span><img src="images/image5.png"></span><br><br>      
+      <form action="phptoxml.php" method="post">
+        <label for="text">
+          Select the emotion<br>
+          <select name="emotion_name">  
+            <option value="happiness">happiness</option>
+            <option value="sadness">sadness</option>
+            <option value="disgust">disgust</option>
+            <option value="fear">fear</option>
+            <option value="surprise">surprise</option>
+            <option value="anger">anger</option>
+            <option value="amusement">amusement</option>
+            <option value="anxiety">anxiety</option>
+            <option value="awkwardness">awkwardness</option>
+            <option value="boredom">boredom</option>
+            <option value="calmness">calmness</option>
+            <option value="confusion">confusion</option>
+            <option value="excitement">excitement</option>
+            <option value="horror">horror</option>
+            <option value="joy">joy</option>
+            <option value="nostalgia">nostalgia</option>
+            <option value="relief">relief</option>
+            <option value="satisfaction">satisfaction</option>
+            <option value="entrancement">entrancement</option>
+            <option value="appreciation">appreciation</option>
+          </select>
+        </label><br><br>
+    
+        <label for="text">Add your suggestion here</label><br>
+        <textarea name="response" type="texarea" placeholder="Lorem ipsum dolor..."></textarea><br><br>
+    
+        <label for="text">
+          Select the severity level<br>
+          <select name="severity_level">  
+            <option value="good_high_impact">Good high impact</option>
+            <option value="bad_significant_impact">Bad significant impact</option>
+            <option value="malicious_significant_impact">Malicious significant impact</option>
+          </select>
+        </label><br><br>
+    
+        <input class="button black padding-large large margin-top" type="submit" value="Submit"><br><br>
+      </form>
+      <p class="text-grey">Below is the button to load the new XML file into memeory</p><br>
+      <button class="button black padding-large large margin-top" onclick="loadXMLNewDoc()">Click here</button>
+    </div>
+  </div>
+</div>
+
+<!-- Fifth Grid -->
+<div class="row-padding padding-64 container">
+  <div class="content">
+    <div class="twothird">
+      <h1 class="text-red">Exercice 5</h1>
+      <h5 class="padding-32">
+        We have displayed the list of emotional learning solutions from the local responses XML file / database. 
+        Firstly, we loaded this xml file into the memory. After that, we created the corresponding XSL file. 
+        The emotions are highlighted with a different background color depending on their severity and how to handle them is colored with green.
+      </h5>
+      <p class="text-grey">Below is the link which redirects to the list with the responses extracted from the database</p>
+      <button class="button black padding-large large margin-top"><a href="responsesxml.html">Click here</a></button><br><br>      
+      <p class="text-grey">Below is the link which redirects to the xml file content with xsl extension</p>
+      <button class="button black padding-large large margin-top"><a href="responseswithxsl.xml">Click here</a></button><br><br>
+    
+    </div>
+  </div>
+</div>
+
+<!-- Sixth Grid -->
+<div class="row-padding light-grey padding-64 container">
+  <div class="content">
+    <div class="twothird">
+      <h1 class="text-red">Exercice 6</h1>
+      <h5 class="padding-32">
+        We have created a DTS and a XSD file for the XML emotion file.
+      </h5>
+      <p class="text-grey">Below are the links which redirect to the dtd and xsd file content</p>
+      <button class="button black padding-large large margin-top"><a href="emotions.dtd">Click here for DTD</a></button>
+      <button class="button black padding-large large margin-top"><a href="emotions.xsd">Click here for XSD</a></button>
+    </div>
+  </div>
+</div>
+
+<!-- Seventh Grid -->
+<div class="row-padding padding-64 container">
+  <div class="content">
+    <div class="twothird">
+      <h1 class="text-red">Exercice 7</h1>
+      <h5 class="padding-32">
+        We have created input data for at least 20 emotions in XML format and associated ways of handling them in this webpage.
+      </h5>
+      <p class="text-grey">Below is the link which redirects to the xml file content</p>
+      <button class="button black padding-large large margin-top"><a href="emotions.xml">Click here</a></button>
+    </div>
+  </div>
+</div>
+
+<!-- Eighth Grid -->
+<div class="row-padding light-grey padding-64 container">
+  <div class="content">
+    <div class="twothird">
+      <h1 class="text-red">Exercice 8</h1>
+      <h5 class="padding-32">
+        We have created a DTS and a XSD file for the XML emotion file.
+      </h5>
+      <p class="text-grey">Below are the links which redirect to the dtd and xsd file content</p>
+      <button class="button black padding-large large margin-top"><a href="emotions.dtd">Click here for DTD</a></button>
+      <button class="button black padding-large large margin-top"><a href="emotions.xsd">Click here for XSD</a></button>
+    </div>
+  </div>
+</div>
+
+<!-- Ninth Grid -->
+<div class="row-padding padding-64 container">
+  <div class="content">
+    <div class="twothird">
+      <h1 class="text-red">Exercice 9</h1>
+      <h5 class="padding-32">
+        We have created input data for at least 20 emotions in XML format and associated ways of handling them in this webpage.
+      </h5>
+      <p class="text-grey">Below is the link which redirects to the xml file content</p>
+      <button class="button black padding-large large margin-top"><a href="emotions.xml">Click here</a></button>
+    </div>
+  </div>
+</div>
+
+<!-- Tenth Grid -->
+    <div class="row-padding padding-64 container black opacity padding-64">
+      <div class="content">
+        <div class="twothird">
+          <h1 class="text-red">Exercice 10</h1>
+          <h5 class="padding-32">
+            To provide a nice graphical interface for the application, we used CSS
+          </h5>
+          <p class="text-grey">Below is a fragment of the CSS code</p>
+          <span><img src="images/imagecss.png" width="900"></span>
+        </div>
+      </div>
+    </div>
+
+<!-- Footer -->
+<footer class="container padding-64 center opacity">  
+ <p>2021 Semantic Web Project</p>
+</footer>
+
+  <button type="button"><a href="emotions.xml">Display the xml emotions list content</a></button>
+  <br><br>
+
+  <button type="button"><a href="emotions.dtd" target="_blank">Download the dtd emotions file content</a></button>
+  <br><br>
+
+  <button type="button"><a href="emotions.xsd" target="_blank">Display the xsd emotions file content</a></button>
+  <br><br>
+
+  <button type="button" onclick="loadXMLDoc()">Read into memory the local xml file</button>
+  <br><br>
+
+  <span><img src="images/image1.png" ></span>
+  <span><img src="images/image2.png" width="1000"></span>
+
+  <form action="phptoxml.php" method="post">
+    <label for="text">
+      Select the emotion<br>
+      <select name="emotion_name">  
+        <option value="happiness">happiness</option>
+        <option value="sadness">sadness</option>
+        <option value="disgust">disgust</option>
+        <option value="fear">fear</option>
+        <option value="surprise">surprise</option>
+        <option value="anger">anger</option>
+        <option value="amusement">amusement</option>
+        <option value="anxiety">anxiety</option>
+        <option value="awkwardness">awkwardness</option>
+        <option value="boredom">boredom</option>
+        <option value="calmness">calmness</option>
+        <option value="confusion">confusion</option>
+        <option value="excitement">excitement</option>
+        <option value="horror">horror</option>
+        <option value="joy">joy</option>
+        <option value="nostalgia">nostalgia</option>
+        <option value="relief">relief</option>
+        <option value="satisfaction">satisfaction</option>
+        <option value="entrancement">entrancement</option>
+        <option value="appreciation">appreciation</option>
+      </select>
+    </label><br><br>
+
+    <label for="text">Add your suggestion here</label><br>
+    <textarea name="response" type="texarea" placeholder="Lorem ipsum dolor..."></textarea><br><br>
+
+    <label for="text">
+      Select the severity level<br>
+      <select name="severity_level">  
+        <option value="good_high_impact">Good high impact</option>
+        <option value="bad_significant_impact">Bad significant impact</option>
+        <option value="malicious_significant_impact">Malicious significant impact</option>
+      </select>
+    </label><br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <br><br>
+
+  <button type="button"><a href="responses.xml" target="_blank">Click here to see xml file with the responses from the database</a></button>
+  <br><br>
+
+  <button type="button" onclick="loadXMLNewDoc()">Read into memory the new local xml file with the new content</button>
+  <br><br>
+
+  <span><img src="images/image3.png" ></span>
+  <span><img src="images/image4.png" width="1000"></span>
+
+  <br><br>
+
+  <button type="button"><a href="responsesxml.html" target="_blank">Click here to see the list with the responses extracted from the database</a></button>
+  <br><br>
+
+  <button type="button"><a href="responseswithxsl.xml" target="_blank">Click here to see the XML file with XSL format</a></button>
+  <br><br>
+
+  <script>
+    function loadXMLDoc() {
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.open("GET", 'http://localhost:80/project1/emotions.xml', true);
+      xmlhttp.send(null);
+    }
+
+    function loadXMLNewDoc() {
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.open("GET", 'http://localhost:80/project1/responses.xml', true);
+      xmlhttp.send(null);
+    }
+  </script>
+
+</body>
+</html>

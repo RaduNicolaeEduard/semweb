@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    body {font:15px Calibri;}
+    #emotions {
+        width:auto;
+        text-align:center;
+        overflow:hidden;
+    }
+    #emotions div {
+        width:47%;
+        text-align:left;
+        border:solid 1px #000;
+        margin:1px 0;
+        padding:2px 5px;
+    }
+    .col1 {
+        float:left;
+        clear:both;
+    }
+</style>
+</head>
+<body>
+<p>Data extracted from the <b>Responses XML</b> local file</p>
+<div id="emotions"></div>
+
+</body>
+
+<script>
+var xmlhttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
+
+function reportStatus() {
+    if (xmlhttp.readyState == 4)             
+        showTheList(this.responseXML);   
+}
+
+xmlhttp.onreadystatechange = reportStatus;
+xmlhttp.open("GET", 'http://localhost:80/project1/responses.xml', true);        // true = ASYNCHRONOUS REQUEST (DESIRABLE), false = SYNCHRONOUS REQUEST.
+xmlhttp.send();
+
+function showTheList(xml) {
+
+    var divEmotions = document.getElementById('emotions');      
+    var list = xml.getElementsByTagName('emotion');     
+
+    for (var i = 0; i < list.length; i++){
+        var divLeft = document.createElement('div');
+        divLeft.className = 'col1';
+        divLeft.innerHTML = list[i].getElementsByTagName("response")[0].childNodes[0].nodeValue;
+        divEmotions.appendChild(divLeft);
+    }
+    
+};
+
+</script>
+
+</body>
+</html>

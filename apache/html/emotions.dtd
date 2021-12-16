@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT emotions (emotion+)>
+<!ELEMENT emotion (name, indications+)>
+<!ELEMENT name (#PCDATA) >
+<!ELEMENT indications (indication+) >
+<!ELEMENT indication (#PCDATA)>
+
+<!ATTLIST emotion id CDATA #REQUIRED >
+<!ATTLIST indication id CDATA #REQUIRED >

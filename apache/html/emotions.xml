@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<emotions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="emotions.xsd">
+    <emotion id="1">
+        <name>happiness</name>
+        <indications>
+            <indication id='1'>What are you waiting for ? Join in !</indication>
+            <indication id='2'>Make sure it's not too obvious. Sometimes it might not be proper to show your happiness in all the contexts</indication>
+        </indications>
+    </emotion>  
+    <emotion id="2">  
+        <name>sadness</name>
+        <indications>        
+            <indication id='1'>Accept the facts as they are and move on</indication>
+        </indications>
+    </emotion>
+    <emotion id="3">    
+        <name>disgust</name>
+        <indications>
+            <indication id='1'>Listen to your insticts: withdraw rapidly</indication>
+        </indications>
+    </emotion>
+    <emotion id="4">    
+        <name>fear</name>
+        <indications>
+            <indication id='1'>Just get away</indication>
+        </indications>
+    </emotion>
+    <emotion id="5">    
+        <name>surprise</name>
+        <indications>
+            <indication id='1'>Sometimes things don't go as you expect</indication>
+        </indications>
+    </emotion>    
+    <emotion id="6">    
+        <name>anger</name>
+        <indications>
+            <indication id='1'>Think twice before your attack</indication>
+            <indication id='2'>Stand up for yourself!</indication>
+        </indications>
+    </emotion>
+    <emotion id="7">    
+        <name>amusement</name>
+        <indications>
+            <indication id='1'>Laugh out loud! You have the right to do so</indication>
+            <indication id='2'>Not all the time it's proper to show you're amused</indication>
+        </indications>
+    </emotion> 
+    <emotion id="8">    
+        <name>anxiety</name>
+        <indications>
+            <indication id='1'>Get over it</indication>
+        </indications>
+    </emotion>  
+    <emotion id="9">    
+        <name>awkwardness</name>
+        <indications>
+            <indication id='1'>Sometimes you might experience that as well</indication>
+            <indication id='2'>Just go with the flow. It's normal to turn things a little awkward</indication>
+        </indications>
+    </emotion>   
+    <emotion id="10">    
+        <name>boredom</name>
+        <indications>
+            <indication id='1'>Surely you need some hobbies</indication>
+        </indications>
+    </emotion> 
+    <emotion id="11">    
+        <name>calmness</name>
+        <indications>
+            <indication id='1'>Sometimes relaxation is a mandatory</indication>
+        </indications>
+    </emotion> 
+    <emotion id="12">    
+        <name>confusion</name>
+        <indications>
+            <indication id='1'></indication>
+        </indications>
+    </emotion>  
+    <emotion id="13">    
+        <name>excitement</name>
+        <indications>
+            <indication id='1'>Well, well, well! You need to check things out a little more</indication>
+        </indications>
+    </emotion> 
+    <emotion id="14">    
+        <name>horror</name>
+        <indications>
+            <indication id='1'>You need sometimes to be scared, don't you ? After all, this is a sort of learning</indication>
+            <indication id='2'>Listen to your insticts and run as fast as you can</indication>
+        </indications>
+    </emotion>   
+    <emotion id="15">    
+        <name>interest</name>
+        <indications>
+            <indication id='1'>You just found something appealing</indication>
+        </indications>        
+    </emotion> 
+    <emotion id="16">  
+        <name>joy</name>
+        <indications>
+            <indication id='1'>Looks like someone is having a good day. What about sharing it with the rest of the world ?</indication>
+        </indications>  
+    </emotion>
+    <emotion id="17">  
+        <name>nostalgia</name>
+        <indications>
+            <indication id='1'>Looks like you start to ruminate. Get over it !</indication>  
+        </indications>
+    </emotion>  
+    <emotion id="18">
+        <name>relief</name>
+        <indications>
+            <indication id='1'>After all the hard circumstances you've been through, you deserve some reconciliation</indication>  
+        </indications>  
+    </emotion>    
+    <emotion id="19">  
+        <name>satisfaction</name>
+        <indications>
+            <indication id='1'>Good job! All that hard work paid in the end</indication>
+        </indications>  
+    </emotion> 
+    <emotion id="20"> 
+        <name>entrancement</name>
+        <indications>
+            <indication id='1'></indication>
+        </indications>   
+    </emotion>  
+    <emotion id="21"> 
+        <name>appreciation</name>
+        <indications>
+            <indication id='1'>It's good you have something to look up to</indication> 
+        </indications>  
+    </emotion>                                           
+</emotions>

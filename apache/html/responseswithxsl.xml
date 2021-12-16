@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="responses.xsl"?>
+<emotions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="responses.xsd">
+    <emotion id="1">
+        <emotion_name>horror</emotion_name>
+        <response>it happens</response>
+        <severity_level>malicious_significant_impact</severity_level>
+    </emotion>
+    <emotion id="2">
+        <emotion_name>confusion</emotion_name>
+        <response>might happen</response>
+        <severity_level>bad_significant_impact</severity_level>
+    </emotion>
+    <emotion id="3">
+        <emotion_name>happiness</emotion_name>
+        <response>might happen</response>
+        <severity_level>good_high_impact</severity_level>
+    </emotion>
+</emotions>
